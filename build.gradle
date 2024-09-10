@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'AutomationKT'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'com.microsoft.playwright:playwright:1.46.0'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+task playwright(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    mainClass = 'com.microsoft.playwright.CLI'
+}
+
+test {
+    useJUnitPlatform()
+}
