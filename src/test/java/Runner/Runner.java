@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "features"
-        ,glue={"StepDefinitions"}
+        features = "C:\\Users\\SHREYACH\\IdeaProjects\\AutomationPlaywright\\src\\test\\resources\\features\\Scenario_playwright.feature"
+        ,glue={"C:\\Users\\SHREYACH\\IdeaProjects\\AutomationPlaywright\\src\\test\\java\\StepDefinations\\PlaywrightStepDefinations.java"}
 )
 
 public class Runner {
